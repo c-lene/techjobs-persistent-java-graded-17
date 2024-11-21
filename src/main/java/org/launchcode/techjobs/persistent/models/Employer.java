@@ -18,8 +18,10 @@ public class Employer extends AbstractEntity {
     @Size(min = 3, max = 50, message = "Location must be between 3 and 50 characters.")
     private String location;
 
+
+    // Specifies 'employer_id' column is the foreign key
     @OneToMany
-    @JoinColumn(name = "employer_id")                         // Specifies the foreign key column used to link 2 tables
+    @JoinColumn(name = "employer_id")
     private final List<Job> jobs = new ArrayList<>();
 
 
