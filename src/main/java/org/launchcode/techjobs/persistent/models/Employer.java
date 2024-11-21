@@ -15,7 +15,7 @@ public class Employer extends AbstractEntity {
 
     /** FIELDS **/
     @NotBlank
-    @Size(min = 3, max = 50, message = "Location must be between 3 and 50 characters.")
+    @Size(min = 3, max = 15, message = "Location must be between 3 and 15 characters.")
     private String location;
 
 
