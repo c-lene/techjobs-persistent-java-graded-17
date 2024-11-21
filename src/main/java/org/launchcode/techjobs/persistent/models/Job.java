@@ -25,7 +25,7 @@ public class Job extends AbstractEntity {
     // Primary Constructor
     // Initialize the id and value fields.
     public Job(Employer anEmployer, List<Skill> someSkills) {
-        super();
+//        super();
         this.employer = anEmployer;
         this.skills = someSkills;
     }
