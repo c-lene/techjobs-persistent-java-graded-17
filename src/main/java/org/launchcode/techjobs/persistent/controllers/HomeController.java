@@ -53,6 +53,7 @@ public class HomeController {
         return "add";
     }
 
+
     @PostMapping("add")
     public String processAddJobForm(@ModelAttribute @Valid Job newJob,
                                     Errors errors, Model model, @RequestParam int employerId,
@@ -82,6 +83,7 @@ public class HomeController {
         return "redirect:";
     }
 
+
     @GetMapping("view/{jobId}")
     public String displayViewJob(Model model, @PathVariable int jobId) {
 
@@ -96,7 +98,7 @@ public class HomeController {
         } else {
             return "redirect:../";
         }
-        
+
     }
 
 }
