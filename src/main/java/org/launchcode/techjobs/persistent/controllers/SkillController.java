@@ -29,6 +29,7 @@ public class SkillController {
 
     @GetMapping("add")
     public String displayAddSkillForm(Model model) {
+        model.addAttribute("title", "Add Skill");
         model.addAttribute(new Skill());
         return "skills/add";
     }
@@ -39,6 +40,7 @@ public class SkillController {
 
         // Validation IF errors present, redirects to page back to the original Add form
         if (errors.hasErrors()) {
+            model.addAttribute("title", "Add Skill");
             return "skills/add";
         }
 
